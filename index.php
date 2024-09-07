@@ -6,17 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="get">
+    <form action="index.php" method="post">
         <label>Username :</label><br>
         <input type="text" name="username"><br>
         <label>Password :</label><br>
-        <input type="text" name="password"><br>
+        <input type="password" name="password"><br>
         <input type="submit" value="Log In">
     </form>
 </body>
 </html>
 <?php
 echo "Bonjour, bienvenue sur mon projet PHP !" . "<br>";
-echo $_GET["username"] . "<br>";
-echo $_GET["password"] . "<br>";
+echo $_POST["username"] . "<br>";
+echo $_POST["password"] . "<br>";
 ?>
