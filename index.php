@@ -9,14 +9,21 @@
     <form action="index.php" method="post">
         <label>Username :</label><br>
         <input type="text" name="username"><br>
-        <label>Password :</label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Log In">
+        <label>Quantity :</label><br>
+        <input type="text" name="quantity"><br>
+        <input type="submit" value="Total">
     </form>
 </body>
 </html>
 <?php
-echo "Bonjour, bienvenue sur mon projet PHP !" . "<br>";
+$X = $_POST["username"];
+$Item = "Pizza";
+$Qty = $_POST["quantity"];
+$Price = 13;
+$Total = $_POST["quantity"] * $Price;
+echo "Hello $X , Welcome !" . "<br>";
+echo "You have ordered $Qty x $Item/s" . "<br>";
+echo "Your total is : $$Total" . "<br>";
 echo $_POST["username"] . "<br>";
-echo $_POST["password"] . "<br>";
+echo $_POST["quantity"] . "<br>";
 ?>
